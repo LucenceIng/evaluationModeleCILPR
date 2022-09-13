@@ -3,7 +3,7 @@ from typing import Set, Tuple, Union, List, Dict
 from collections import defaultdict, Counter
 
 def import_known_tokens(
-    dataset="/home/thibault/dev/LASLA/mood-tense-voice-pft-clitics/train.tsv",
+    dataset="./OF3C/TRAIN.tsv",
     lower_tokens=True
 ) -> Tuple[Set[str], Set[str]]:
     """ This functions returns sets formed of (1) the known tokens and (2) the known lemmas
