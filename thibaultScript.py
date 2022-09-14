@@ -131,7 +131,8 @@ def vjui(tok):
     return tok.replace("v", "u").replace("j", "i").replace("J", "I").replace("V", "U")
 
 
-def convert_raw(gold, task_list=[], 
+
+def convert_raw_lat(gold, task_list=[], 
                 form_fn=lambda x: vjui(x).lower(), 
                 lemma_fn=lambda x: vjui(x).lower(), 
                 pos_fn=lambda x: x.replace("com", "").replace("pro", ""),
