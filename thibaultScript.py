@@ -3,7 +3,7 @@ from typing import Set, Tuple, Union, List, Dict
 from collections import defaultdict, Counter
 
 def import_known_tokens(
-    dataset="/home/thibault/dev/LASLA/mood-tense-voice-pft-clitics/train.tsv",
+    dataset="./OF3C/TRAIN.tsv",
     lower_tokens=True
 ) -> Tuple[Set[str], Set[str]]:
     """ This functions returns sets formed of (1) the known tokens and (2) the known lemmas
@@ -131,7 +131,8 @@ def vjui(tok):
     return tok.replace("v", "u").replace("j", "i").replace("J", "I").replace("V", "U")
 
 
-def convert_raw(gold, task_list=[], 
+
+def convert_raw_lat(gold, task_list=[], 
                 form_fn=lambda x: vjui(x).lower(), 
                 lemma_fn=lambda x: vjui(x).lower(), 
                 pos_fn=lambda x: x.replace("com", "").replace("pro", ""),
